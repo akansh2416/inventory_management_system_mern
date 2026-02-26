@@ -1,6 +1,35 @@
 # Inventory Management System MERN CRUD App
 
+<p align="left">
+  <img src="https://img.shields.io/badge/Docker-Containerized-blue?logo=docker" />
+  <img src="https://img.shields.io/badge/React-Frontend-61DAFB?logo=react" />
+  <img src="https://img.shields.io/badge/Node.js-Backend-339933?logo=node.js" />
+  <img src="https://img.shields.io/badge/MongoDB-Database-47A248?logo=mongodb" />
+</p>
+
+
 A simple MERN project that lets the user insert, update, delete & get products from the MongoDB.
+
+##🐳 To Run App Using Docker (Recommended)
+###1. Make sure Docker & Docker Compose are installed:
+docker --version
+docker compose version
+###2. From the root folder (where docker-compose.yml exists), run:
+docker compose up --build
+###3. Access the application at:
+
+Frontend → http://localhost:3000
+
+Backend → http://localhost:3001
+
+MongoDB → mongodb://localhost:27017
+
+###4. To stop containers:
+docker compose down
+
+To remove volumes (reset database):
+
+docker compose down -v
 
 ## To Run App:
 
