@@ -1,0 +1,41 @@
+services:
+
+   frontend:
+     build: ./Frontend/inventory_management_system
+     container_name: imsfrontend
+     ports:
+         - "3000:3000"
+     networks:
+         - mern_network
+     environment:
+         - REACT_APP_API_URL=http://backend:3001
+     depends_on:
+         - backend
+   backend:
+      build: ./Backend
+      container_name: imsbackend
+      ports:
+        - "3001:3001"
+      networks:
+        - mern_network
+      environment:
+        - MONGO_URI=mongodb://mongo:27017/mydatabase
+      depends_on:
+        - mongo
+   mongo:
+      image: mongo:latest
+      ports: 
+        - "27017:27017"
+      networks:
+        - mern_network
+      volumes:
+        - mongo-data:/data/db
+networks:
+  mern_network:
+    driver: bridge
+
+volumes:
+  mongo-data:
+    driver: local
+
+
