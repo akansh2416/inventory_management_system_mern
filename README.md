@@ -10,28 +10,30 @@
 
 A simple MERN project that lets the user insert, update, delete & get products from the MongoDB.
 
-##🐳 To Run App Using Docker (Recommended)
-###1. Make sure Docker & Docker Compose are installed:
+## 🐳 To Run App Using Docker (Recommended)
+### 1. Make sure Docker & Docker Compose are installed:
 docker --version
 docker compose version
-###2. From the root folder (where docker-compose.yml exists), run:
+
+### 2. From the root folder (where docker-compose.yml exists), run:
 docker compose up --build
-###3. Access the application at:
 
-Frontend → http://localhost:3000
+### 3. Access the application at:
 
-Backend → http://localhost:3001
+  -Frontend → http://localhost:3000
 
-MongoDB → mongodb://localhost:27017
+  -Backend → http://localhost:3001
 
-###4. To stop containers:
-docker compose down
+  -MongoDB → mongodb://localhost:27017
 
-To remove volumes (reset database):
+### 4. To stop containers:
+  docker compose down
 
-docker compose down -v
+  To remove volumes (reset database):
 
-## To Run App:
+  docker compose down -v
+
+## To Run App Without Docker (Manual Setup):
 
 ### 1. Open the folder in vs code and run (npm install) command.
    
